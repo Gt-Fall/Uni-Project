@@ -1,0 +1,998 @@
+/* supabase password to database - fucno5-bojdUz-wozbym */
+
+/* General Page styles  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #292524;
+  color: #fafaf9;
+  font-family: "Sono", sans-serif;
+  padding: 48px 64px;
+}
+
+.app {
+  width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background-color: green;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* homepage styling */
+
+#hero-image {
+  background-image: url("https://pfrszpndyxrzwlpvjxod.supabase.co/storage/v1/object/public/fabrics/Welcome%20Pic.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  height: 500px;
+  margin-top: 30px;
+  box-shadow: 0 0 25px 0 grey;
+}
+
+#welcome-text {
+  text-align: center;
+  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+
+  font-size: 60px;
+  padding-top: 175px;
+}
+
+#welcome-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#welcome-blurb {
+  background-color: indianred;
+  width: 0.75fr;
+  height: auto;
+  padding: 10px;
+  border-radius: 20px;
+  border-width: 4px;
+  border-color: indigo;
+  border-style: groove;
+}
+
+#amy-pic {
+  border-radius: 25%;
+  width: 20%;
+  height: auto;
+  border: 3px solid blue;
+  box-shadow: 0 0 25px 0 darkblue;
+}
+
+/* Styles for navbar */
+
+.navbar {
+  background-color: maroon;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  box-shadow: 0 0 25px 0 black;
+  width: 100%;
+  height: 80px;
+  border-end-end-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.nav-links {
+  width: 100%;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  box-shadow: 0 0 25px 0 rgb(102, 2, 2);
+  grid-gap: 1em;
+  list-style: none;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 25px;
+  /* background-color: lightgreen; */
+}
+
+.list-item {
+  text-align: center;
+  padding: 0.7rem 1rem;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.list-item:hover {
+  background-color: lightslategrey;
+  border-radius: 4px;
+  transition: 220ms all ease-in-out;
+}
+
+.list-item a {
+  color: white;
+  font-family: "Coiny", sans-serif;
+  text-decoration: none;
+}
+/* RESPONSIVE NAVBAR MENU STARTS
+
+/* CHECKBOX HACK */
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  font-size: 50px;
+  user-select: none;
+  margin-left: 50px;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 1000px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: rgb(102, 2, 2);
+    right: 0;
+    top: 154px;
+    left: 100px;
+    width: 200px;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+
+  .menu li + li {
+    padding-top: 12px;
+  }
+
+  .list-item {
+    background-color: rgb(102, 2, 2);
+  }
+
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* styles for header  */
+
+.header {
+  /* margin-bottom: 10px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 40px;
+}
+
+@media (max-width: 690px) {
+  .header h1 {
+    font-size: 45px;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo img {
+  height: 150px;
+  width: 150px;
+}
+
+.logo h1 {
+  margin-left: 40px;
+}
+
+@media (max-width: 520px) {
+  .header h1 {
+    font-size: 36px;
+  }
+  body {
+    padding: 0;
+  }
+  .logo {
+    gap: 7px;
+  }
+}
+
+/* Styles for the Footer */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: wheat;
+}
+
+.footer-link:hover {
+  text-decoration: none;
+  color: burlywood;
+  text-decoration: underline;
+}
+
+/* Styles for product page */
+
+.product_Heading {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+#snoods_Info {
+  font-size: 23px;
+  background-color: #ffc107;
+  background-color: rgb(243, 187, 0);
+  padding: 10px;
+  border-radius: 30px;
+}
+
+#snoods_Info h2 {
+  margin-bottom: 5px;
+}
+
+#snood_Pic {
+  height: 350px;
+  width: 350px;
+}
+
+#pic_table {
+  display: flex;
+  gap: 180px;
+  margin: 20px;
+}
+
+#snood_size_guide {
+  width: auto;
+  display: block;
+  /* justify-content: center; */
+  align-items: center;
+  height: 300px;
+  font-family: "Courier New", Courier, monospace;
+  border: 3px solid black;
+  margin-top: 20px;
+  background-color: rgb(180, 99, 192);
+}
+
+#table_title {
+  font-size: 25px;
+  font-weight: bold;
+  border-bottom: 3px solid black;
+}
+
+#snood_size_guide th {
+  padding: 5px;
+}
+
+#snood_size_guide td {
+  text-align: center;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 3px;
+  padding-bottom: 10px;
+}
+
+#hood_Info {
+  font-size: 23px;
+  background-color: #ff0728b6;
+  padding: 10px;
+  border-radius: 30px;
+}
+#hood_Info h2 {
+  margin-bottom: 5px;
+}
+
+#tank_Info {
+  font-size: 23px;
+  background-color: #8f07ff;
+  padding: 10px;
+  border-radius: 30px;
+}
+#Tank_Info h2 {
+  margin-bottom: 5px;
+}
+
+#pic_table2 {
+  display: flex;
+  gap: 40px;
+  margin: 20px;
+}
+
+#hood_Size {
+  display: flex;
+  gap: 0px;
+}
+
+#hood_size_guide {
+  width: auto;
+  display: block;
+  /* justify-content: center; */
+  align-items: center;
+  height: auto;
+  font-family: "Courier New", Courier, monospace;
+  border: 3px solid black;
+  background-color: rgb(121, 38, 29);
+}
+
+#hood_size_guide th {
+  padding: 5px;
+}
+
+#hood_size_guide td {
+  text-align: center;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 3px;
+  padding-bottom: 10px;
+}
+
+#tank_size_guide {
+  width: auto;
+  display: block;
+  /* justify-content: center; */
+  align-items: center;
+  height: auto;
+  font-family: "Courier New", Courier, monospace;
+  border: 3px solid black;
+  background-color: rgb(2, 154, 223);
+}
+
+#tank_size_guide th {
+  padding: 5px;
+}
+
+#tank_size_guide td {
+  text-align: center;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 3px;
+  padding-bottom: 10px;
+}
+
+/* Styles for Fabrics page */
+
+.fabric-page-header {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.fabric-list {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  align-self: stretch;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.fabricItem {
+  font-size: 20px;
+  line-height: 1.4;
+  background-color: #44403c;
+  margin-bottom: 16px;
+  padding: 16px 24px;
+  letter-spacing: -1px;
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 250px;
+  height: 530px;
+  /* vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 250px; */
+  gap: 24px;
+}
+
+@media screen and (max-width: 420px) {
+  .fabric-list {
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .fabricItem {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .fabric-text {
+    width: 240px;
+    height: 140px;
+  }
+  .fabricPhoto {
+    height: 240px;
+    width: 240px;
+    background-color: gray;
+  }
+}
+
+.fabric-text {
+  width: 240px;
+  height: 140px;
+}
+
+.stockText {
+  margin-bottom: 3px;
+}
+
+.inStockText {
+  color: lightgreen;
+}
+
+.lowStockText {
+  color: rgb(192, 75, 39);
+}
+
+.outStockText {
+  color: rgb(245, 70, 70);
+}
+
+.fabricPhoto {
+  height: 220px;
+  width: 220px;
+  background-color: gray;
+}
+
+.fabric-blurb {
+  color: cornsilk;
+  display: block;
+}
+
+.order-btn {
+  margin: 0 auto;
+}
+
+.order-btn > button {
+  vertical-align: top;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 3px;
+  margin-top: 10px;
+  padding: 7px;
+  border-radius: 45px;
+  background-color: lightsalmon;
+  transition: 220ms all ease-in-out;
+}
+
+.order-btn > button:hover {
+  padding: 8px;
+}
+
+/* styles for the order form  */
+
+.orderForm {
+  position: fixed;
+  box-sizing: border-box;
+  width: 500px;
+  height: 460px;
+  top: 20%;
+  bottom: 0;
+  left: 30%;
+  right: 0;
+  /* background-color: rgba(36, 87, 228, 0.9); */
+  background-color: rgb(99, 97, 97);
+  box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: lightcoral;
+}
+
+.orderForm p {
+  text-align: center;
+}
+
+.order-form {
+  display: block;
+  margin-left: 20px;
+}
+
+.order-btn {
+  margin-left: 5px;
+}
+
+.cancel-btn {
+  margin-left: 20px;
+  margin-top: 3px;
+}
+
+@media screen and (max-width: 420px) {
+  .orderForm {
+    position: fixed;
+    box-sizing: border-box;
+    width: 380px;
+    height: 460px;
+    top: 20%;
+    bottom: 0;
+    left: 5%;
+    right: 0;
+    /* background-color: rgba(36, 87, 228, 0.9); */
+    background-color: rgb(99, 97, 97);
+    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: lightcoral;
+  }
+}
+
+.fabric-page-header {
+  text-align: center;
+}
+
+.orderPhoto {
+  height: 250px;
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+body.active-popup {
+  overflow: hidden;
+}
+
+body.active-popup .main {
+  filter: blur(5px);
+  background: rgba(0, 0, 0, 0.08);
+  transition: filter 0ms ease-in-out 0ms;
+}
+
+body.active-popup .orderForm {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+/* Styles for PreMade page */
+
+.preMade_Header {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.preMadeItem {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: #ffc107;
+  border-radius: 30px;
+  width: 75%;
+  height: 220px;
+  margin: 20px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 420px) {
+  .preMadeItem {
+    width: fit-content;
+    flex-direction: column;
+    justify-content: end;
+  }
+}
+
+.preMade-Photo {
+  height: 200px;
+  width: 200px;
+  background-color: gray;
+  margin-left: 20px;
+  border-style: solid;
+  border-color: aqua;
+  border-radius: 30px;
+  border-width: 3px;
+}
+
+.preMade-blurb {
+  background-color: brown;
+  width: 350px;
+  height: 180px;
+  padding: 4px;
+  border-radius: 30px;
+  border-width: 3px;
+  border-style: dotted;
+  border-color: burlywood;
+  text-align: center;
+}
+
+.preMade-name {
+  margin-bottom: 10px;
+}
+
+.preMade-text {
+  margin-top: 30px;
+}
+
+.preMade-cost {
+  margin-top: 20px;
+}
+
+.preMadeButton {
+  margin-right: 20px;
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(
+    rgba(179, 132, 201, 0.84),
+    rgba(57, 31, 91, 0.84) 50%
+  );
+  border-radius: 42px;
+  border-width: 0;
+  box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px,
+    rgba(179, 132, 201, 0.4) 0 8px 12px;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  line-height: 16px;
+  padding: 18px 18px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,
+    rgba(255, 255, 255, 0.2) 0 0 12px, rgba(57, 31, 91, 0.6) 1px 1px 4px,
+    rgba(57, 31, 91, 0.32) 4px 4px 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+}
+
+.preMadeButton:hover {
+  background-image: linear-gradient(#b384c9, #391f5b 50%);
+}
+
+@media (min-width: 768px) {
+  .preMadeButton {
+    font-size: 21px;
+    padding: 18px 34px;
+  }
+}
+
+/* styling for the Basket page  */
+
+#basket_heading {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+#basket_subhead {
+  margin-left: 20px;
+}
+
+.basketTable {
+  display: block;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  overflow: scroll;
+  font-family: "Courier New", Courier, monospace;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+.basketTable table {
+  border: 3px solid rgb(93, 94, 93);
+  /* width: 800px;
+  height: 200px; */
+}
+
+.basketTable thead {
+  background-color: rgb(109, 65, 134);
+  color: whitesmoke;
+}
+
+.basketTable tbody {
+  background-color: wheat;
+  color: black;
+}
+
+.basketTable th {
+  border-bottom: 3px solid black;
+  padding: 5px;
+}
+
+.basketTable td {
+  text-align: center;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.personal-form {
+  box-sizing: border-box;
+  padding: 1rem;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 1rem;
+  background-color: rgb(109, 65, 134);
+  border: 4px solid rgb(94, 50, 117);
+  color: whitesmoke;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+}
+
+#clear_Basket_btn {
+  display: inline-block;
+  padding: 7px 20px;
+  border-radius: 25px;
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  background-image: -webkit-linear-gradient(45deg, #ffc107 0%, #ff8b5f 100%);
+  background-image: linear-gradient(45deg, #ffc107 0%, #ff8b5f 100%);
+  transition: 0.4s;
+}
+
+#clear_Basket_btn:hover {
+  background-image: -webkit-linear-gradient(45deg, #ffc107 0%, #f76a35 100%);
+  background-image: linear-gradient(45deg, #ffc107 0%, #f76a35 100%);
+}
+
+/* Styles for the Admin Home page buttons*/
+
+.admin-home-divs {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.admin-btn {
+  border: none;
+  font-family: "Coiny", sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 17px;
+  padding: 16px;
+  margin: 20px;
+  background-color: #ef4444;
+  color: inherit;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.empty_statement {
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 250px;
+}
+
+/* Style for the Order Admin Page  */
+.adminOrderHead {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.OrdersHeading {
+  margin-top: 10px;
+}
+
+.adminOrderHead button {
+  padding: 4px;
+  border-radius: 8px;
+  transition: 220ms all ease-in-out;
+  justify-content: flex-end;
+  margin-left: 50px;
+}
+.adminOrderHead button:hover {
+  background-color: gray;
+}
+
+/* styles for the dmin orders page and tables */
+
+.IncompleteTable {
+  display: block;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  height: 350px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.IncompleteTable table {
+  border: 3px solid rgb(93, 94, 93);
+  /* width: 800px;
+  height: 200px; */
+}
+
+.IncompleteTable thead {
+  background-color: aquamarine;
+  color: black;
+}
+
+.IncompleteTable tbody {
+  background-color: wheat;
+  color: black;
+}
+
+.IncompleteTable th {
+  border-bottom: 3px solid black;
+  padding: 5px;
+}
+
+.IncompleteTable td {
+  text-align: center;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+/* styling for the complete table   */
+
+.CompleteTable {
+  display: block;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  height: 150px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.CompleteTable table {
+  border: 3px solid rgb(93, 94, 93);
+  /* width: 800px;
+  height: 200px; */
+}
+
+.CompleteTable thead {
+  background-color: aquamarine;
+  color: black;
+}
+
+.CompleteTable tbody {
+  background-color: wheat;
+  color: black;
+}
+
+.CompleteTable th {
+  border-bottom: 3px solid black;
+  padding: 5px;
+}
+
+.CompleteTable td {
+  text-align: center;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+/* Style for the Stock Table */
+
+.stockTableHeading {
+  display: block;
+  padding-top: 16px;
+}
+
+.stockHeading {
+  font-size: larger;
+  font-style: bold;
+}
+
+.addStock {
+  float: right;
+}
+
+.stockTable {
+  display: block;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  height: 70%;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.stockTable table {
+  border: 3px solid rgb(93, 94, 93);
+  /* width: 800px;
+  height: 200px; */
+}
+
+.stockTable thead {
+  background-color: aquamarine;
+  color: black;
+}
+
+.stockTable tbody {
+  background-color: wheat;
+  color: black;
+}
+
+.stockTable th {
+  border-bottom: 3px solid black;
+  padding: 5px;
+}
+
+.stockTable td {
+  text-align: center;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.stockPic {
+  height: 75px;
+  width: 75px;
+}
+
+/* style for the add Stock form */
+
+.stock-form {
+  box-sizing: border-box;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: hsl(0, 0%, 100%);
+  border: 4px solid hsl(0, 0%, 90%);
+  color: #ef4444;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* styling for the edit order form in the Admin */
+
+.orderAdmin-form {
+  box-sizing: border-box;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: hsl(0, 0%, 100%);
+  border: 4px solid hsl(0, 0%, 90%);
+  color: #ef4444;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
